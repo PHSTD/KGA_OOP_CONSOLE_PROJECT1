@@ -1,0 +1,2 @@
+# KGA_OOP_CONSOLE_PROJECT1
+ 미니게임 제작 프로젝트
