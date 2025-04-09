@@ -11,6 +11,7 @@ public class TownScene : BaseScene
         Console.WriteLine("4. 던전으로 간다");
         Console.WriteLine("5. 집으로 간다.");
         
+        Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
     }
     public override void Input()

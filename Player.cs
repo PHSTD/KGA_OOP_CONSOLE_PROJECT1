@@ -3,6 +3,7 @@ namespace KGA_OOP_CONSOLE_PROJECT1;
 public static class Player
 {
     public static int hp = 100;
+    public static int mp = 100;
     public static Vector2 position;
 
     public static void PlayerSet(int level)
@@ -56,6 +57,12 @@ public static class Player
         {
             position = targetPos;
         }
+    }
+    
+    public static void PlayerPrintAll()
+    {
+        Console.WriteLine("============== 상태 ===============");
+        Console.WriteLine($"체력 : {hp} 마력 : {mp}");
     }
     
 }

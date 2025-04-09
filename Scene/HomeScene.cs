@@ -5,9 +5,10 @@ public class HomeScene : BaseScene
     public override void Render()
     {
         Console.WriteLine("당신은 집에 왔습니다.");
-        Console.WriteLine("1. 휴식 - HP를 회복한다.");
+        Console.WriteLine("1. 휴식 - HP와 MP를 회복한다.");
         Console.WriteLine("2. 광장가기 - 광장으로 이동합니다.");
         
+        Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
     }
     public override void Input()

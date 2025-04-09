@@ -12,6 +12,5 @@ public static class Inventory
             Console.WriteLine($"{i} : {s}");
             ++i;
         }
-        Console.WriteLine("===================================");
     }
 }
