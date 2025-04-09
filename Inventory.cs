@@ -6,9 +6,11 @@ public static class Inventory
     public static void ItemPrintAll()
     {
         Console.WriteLine("========== 아이템 목록 ============");
+        int i = 0;
         foreach (string s in inventory)
         {
-            Console.WriteLine(s);
+            Console.WriteLine($"{i} : {s}");
+            ++i;
         }
         Console.WriteLine("===================================");
     }

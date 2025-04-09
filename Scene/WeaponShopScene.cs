@@ -15,7 +15,7 @@ public class WeaponShopScene : BaseScene
     }
     public override void Input()
     {
-        Console.ReadKey(true);
+        inputKey = Console.ReadKey(true).Key;
     }
     public override void Update()
     {
