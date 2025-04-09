@@ -4,10 +4,12 @@ public class DungeonScene : BaseScene
 {
     public override void Render()
     {
-        Console.WriteLine("========== 설정 ============");
-        Console.WriteLine("1. 소리설정");
-        Console.WriteLine("2. 그래픽 설정");
-        Console.WriteLine("3. 타이틀로");
+        Console.WriteLine("========== 던전 ============");
+        Console.WriteLine("1. 레벨 1");
+        Console.WriteLine("2. 레벨 2");
+        Console.WriteLine("3. 레벨 3");
+        Console.WriteLine("4. 레벨 4");
+        Console.WriteLine("5. 레벨 5");
     }
 
 
@@ -15,7 +17,21 @@ public class DungeonScene : BaseScene
     {
         switch (inputKey)
         {
-            
+            case ConsoleKey.D1:
+                Map.MapSet(1);
+                break;
+            case ConsoleKey.D2:
+                Map.MapSet(2);
+                break;
+            case ConsoleKey.D3:
+                Map.MapSet(3);
+                break;
+            case ConsoleKey.D4:
+                Map.MapSet(4);
+                break;
+            case ConsoleKey.D5:
+                Map.MapSet(5);
+                break;
         }
     }
 
@@ -23,6 +39,21 @@ public class DungeonScene : BaseScene
     {
         switch (inputKey)
         {
+            case ConsoleKey.D1:
+                Map.MapPrint();
+                break;
+            case ConsoleKey.D2:
+                Map.MapPrint();
+                break;
+            case ConsoleKey.D3:
+                Map.MapPrint();
+                break;
+            case ConsoleKey.D4:
+                Map.MapPrint();
+                break;
+            case ConsoleKey.D5:
+                Map.MapPrint();
+                break;
             
         }
     }
