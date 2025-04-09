@@ -13,7 +13,10 @@ public class WeaponShopScene : BaseScene
         
         Inventory.ItemPrintAll();
     }
-
+    public override void Input()
+    {
+        Console.ReadKey(true);
+    }
     public override void Update()
     {
         switch (inputKey)

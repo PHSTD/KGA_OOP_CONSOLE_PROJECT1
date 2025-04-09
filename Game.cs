@@ -11,6 +11,8 @@ public class Game
 
     public static void Start()
     {
+        Console.CursorVisible = false;
+            
         sinDic = new Dictionary<string, BaseScene>();
         sinDic.Add("Title", new TitleScene());
         sinDic.Add("Town", new TownScene());
@@ -35,9 +37,12 @@ public class Game
         Start();
         while (gameOver == false)
         {
+            Console.Clear();
             curScene.Render();
             curScene.Input();
+            Console.WriteLine();
             curScene.Update();
+            Console.WriteLine();
             curScene.Result();
         }
         End();

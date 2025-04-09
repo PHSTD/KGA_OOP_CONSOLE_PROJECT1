@@ -12,7 +12,10 @@ public class TitleScene : BaseScene
         Console.WriteLine("3. 게임설정");
         Console.WriteLine("4. 게임종료");
     }
-
+    public override void Input()
+    {
+        inputKey = Console.ReadKey(true).Key;
+    }
 
     public override void Update()
     {

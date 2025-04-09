@@ -11,7 +11,10 @@ public class TownScene : BaseScene
         Console.WriteLine("4. 던전으로 간다");
         Console.WriteLine("5. 집으로 간다.");
     }
-
+    public override void Input()
+    {
+        inputKey = Console.ReadKey(true).Key;
+    }
 
     public override void Update()
     {

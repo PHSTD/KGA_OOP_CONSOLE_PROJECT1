@@ -10,7 +10,10 @@ public class SettingScene : BaseScene
         Console.WriteLine("3. 타이틀로");
     }
 
-
+    public override void Input()
+    {
+        inputKey = Console.ReadKey(true).Key;
+    }
     public override void Update()
     {
         switch (inputKey)

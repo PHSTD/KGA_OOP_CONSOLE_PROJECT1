@@ -14,7 +14,10 @@ public class PotionScene : BaseScene
         Inventory.ItemPrintAll();
     }
 
-
+    public override void Input()
+    {
+        inputKey = Console.ReadKey(true).Key;
+    }
     public override void Update()
     {
         switch (inputKey)

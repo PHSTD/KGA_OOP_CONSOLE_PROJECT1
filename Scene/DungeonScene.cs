@@ -12,49 +12,48 @@ public class DungeonScene : BaseScene
         Console.WriteLine("5. 레벨 5");
     }
 
-
+    public override void Input()
+    {
+        inputKey = Console.ReadKey(true).Key;
+    } 
+    
+    
     public override void Update()
     {
         switch (inputKey)
         {
             case ConsoleKey.D1:
                 Map.MapSet(1);
-                break;
+                Player.PlayerSet(1);
+                break;        
             case ConsoleKey.D2:
                 Map.MapSet(2);
-                break;
+                Player.PlayerSet(2);
+                break;        
             case ConsoleKey.D3:
                 Map.MapSet(3);
-                break;
+                Player.PlayerSet(3);
+                break;        
             case ConsoleKey.D4:
                 Map.MapSet(4);
-                break;
+                Player.PlayerSet(4);
+                break;        
             case ConsoleKey.D5:
                 Map.MapSet(5);
-                break;
+                Player.PlayerSet(5);
+                break;        
         }
+        
     }
 
     public override void Result()
     {
-        switch (inputKey)
+        while (true)
         {
-            case ConsoleKey.D1:
-                Map.MapPrint();
-                break;
-            case ConsoleKey.D2:
-                Map.MapPrint();
-                break;
-            case ConsoleKey.D3:
-                Map.MapPrint();
-                break;
-            case ConsoleKey.D4:
-                Map.MapPrint();
-                break;
-            case ConsoleKey.D5:
-                Map.MapPrint();
-                break;
-            
+            Map.MapPrint();
+            Player.PlayerPrint();
+            Player.PlayerMove(Console.ReadKey(true).Key);
         }
     }
+    
 }
