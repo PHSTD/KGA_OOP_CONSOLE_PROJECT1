@@ -10,6 +10,9 @@ public class DungeonScene : BaseScene
         Console.WriteLine("3. 레벨 3");
         Console.WriteLine("4. 레벨 4");
         Console.WriteLine("5. 레벨 5");
+        Console.WriteLine("6. 광장으로가기");
+        
+        Inventory.ItemPrintAll();
     }
 
     public override void Input()
@@ -41,6 +44,9 @@ public class DungeonScene : BaseScene
             case ConsoleKey.D5:
                 Map.MapSet(5);
                 Player.PlayerSet(5);
+                break;        
+            case ConsoleKey.D6:
+                Game.ChangeScene("Town");
                 break;        
         }
         
