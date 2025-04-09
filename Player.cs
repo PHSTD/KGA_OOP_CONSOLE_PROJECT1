@@ -70,4 +70,14 @@ public static class Player
         Console.WriteLine($"체력 : {hp} 마력 : {mp}");
     }
     
+    public static string PlayerGeteItem(int num)
+    {
+        return Inventory.inventory[num];
+    }
+
+    public static void PlayerRemoveItem(int num)
+    {
+        Inventory.inventory.RemoveAt(num);
+    }
+    
 }
