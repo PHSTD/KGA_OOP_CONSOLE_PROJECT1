@@ -1,3 +1,5 @@
+using KGA_OOP_CONSOLE_PROJECT1.Scene;
+
 namespace KGA_OOP_CONSOLE_PROJECT1;
 
 public static class Player
@@ -35,6 +37,9 @@ public static class Player
         
         switch (input)
         {
+            case ConsoleKey.D0:
+                DungeonScene.exitDungeon = true;
+                break;
             case ConsoleKey.UpArrow:
             case ConsoleKey.W:
                 targetPos.y--;

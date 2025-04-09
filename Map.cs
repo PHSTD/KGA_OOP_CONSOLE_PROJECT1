@@ -79,5 +79,9 @@ public static class Map
             }
             Console.WriteLine();
         }
+        
+        Console.WriteLine("0. 광장으로 가기");
+        Player.PlayerPrintAll();
+        Inventory.ItemPrintAll();
     }
 }
