@@ -35,8 +35,10 @@ public class SettingScene : BaseScene
         switch (inputKey)
         {
             case ConsoleKey.D1:
+                Console.ReadKey();
                 break;
             case ConsoleKey.D2:
+                Console.ReadKey();
                 break;
             case ConsoleKey.D0:
                 Game.ChangeScene("Title");

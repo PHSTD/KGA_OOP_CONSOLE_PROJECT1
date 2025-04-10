@@ -48,6 +48,7 @@ public class TitleScene : BaseScene
                 break;
             case ConsoleKey.D2:
                 Console.WriteLine("준비중인 기능입니다.");
+                Console.ReadKey();
                 break;
             case ConsoleKey.D3:
                 Game.ChangeScene("Setting");
