@@ -29,7 +29,7 @@ public class Game
     
     public static void End()
     {
-        Console.WriteLine("End");
+        Console.WriteLine("게임종료");
     }
     
     public static void Run()

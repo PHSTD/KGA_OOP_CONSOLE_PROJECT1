@@ -7,7 +7,8 @@ public class HomeScene : BaseScene
         Console.WriteLine("당신은 집에 왔습니다.");
         Console.WriteLine("1. 휴식 - HP와 MP를 회복한다.");
         Console.WriteLine("2. 광장가기 - 광장으로 이동합니다.");
-        Console.WriteLine("3. 아이템 버리기.");
+        Console.WriteLine("3. 아이템 버리기");
+        Console.WriteLine("4. 게임 끝내기");
         
         Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
@@ -49,6 +50,9 @@ public class HomeScene : BaseScene
                 break;
             case ConsoleKey.D2:
                 Game.ChangeScene("Town");
+                break;
+            case ConsoleKey.D4:
+                Game.gameOver = true;
                 break;
         }
     }
