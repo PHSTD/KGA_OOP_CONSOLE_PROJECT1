@@ -1,8 +1,12 @@
+using System.Runtime.InteropServices.Marshalling;
+using KGA_OOP_CONSOLE_PROJECT1.Scene;
+
 namespace KGA_OOP_CONSOLE_PROJECT1;
 
-public static class Map
+public class Map : DungeonScene
 {
     public static bool[,] tiles;
+    
 
     public static void MapSet(int level)
     {
@@ -74,13 +78,23 @@ public static class Map
                 }
                 else
                 {
-                    Console.Write(' ');
+                    Random random = new Random();
+                    int num = random.Next();
+                    if (num > 0 && num < 20)
+                    {
+                        Console.Write('M');
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
                 }
             }
             Console.WriteLine();
         }
+
         
-        Console.WriteLine("0. 광장으로 가기");
+        Console.WriteLine("0. 돌아가기");
         Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
     }

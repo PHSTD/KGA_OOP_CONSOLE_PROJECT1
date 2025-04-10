@@ -7,7 +7,7 @@ public class SettingScene : BaseScene
         Console.WriteLine("========== 설정 ============");
         Console.WriteLine("1. 소리설정");
         Console.WriteLine("2. 그래픽 설정");
-        Console.WriteLine("3. 타이틀로");
+        Console.WriteLine("0. 타이틀로 돌아간다");
     }
 
     public override void Input()
@@ -24,8 +24,8 @@ public class SettingScene : BaseScene
             case ConsoleKey.D2:
                 Console.WriteLine("그래픽 설정 완료");
                 break;
-            case ConsoleKey.D3:
-                Console.WriteLine("타이틀로");
+            case ConsoleKey.D0:
+                Console.WriteLine("타이틀로 돌아간다");
                 break;
         }
     }
@@ -38,7 +38,7 @@ public class SettingScene : BaseScene
                 break;
             case ConsoleKey.D2:
                 break;
-            case ConsoleKey.D3:
+            case ConsoleKey.D0:
                 Game.ChangeScene("Title");
                 break;
         }

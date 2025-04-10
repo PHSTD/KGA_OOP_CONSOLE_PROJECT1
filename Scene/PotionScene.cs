@@ -9,7 +9,7 @@ public class PotionScene : BaseScene
         Console.WriteLine("2. 파란포션 - MP를 10만큼 화복한다.");
         Console.WriteLine("3. 주황포션 - HP를 40만큼 회복한다.");
         Console.WriteLine("4. 보라포션 - MP를 40만큼 회복한다.");
-        Console.WriteLine("5. 나간다.");
+        Console.WriteLine("0. 광장으로 이동.");
         
         Inventory.ItemPrintAll();
     }
@@ -34,7 +34,7 @@ public class PotionScene : BaseScene
             case ConsoleKey.D4:
                 Console.WriteLine("보라포션을 삽니다.");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Console.WriteLine("광장으로 돌아간다.");
                 break;
         }
@@ -56,7 +56,7 @@ public class PotionScene : BaseScene
             case ConsoleKey.D4:
                 Inventory.inventory.Add("보라포션");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Game.ChangeScene("Town");
                 break;
         }

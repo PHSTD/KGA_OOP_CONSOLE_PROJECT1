@@ -1,8 +1,11 @@
+
 namespace KGA_OOP_CONSOLE_PROJECT1;
 
-public static class Inventory
+public class Inventory
 {
     public static List<string> inventory = new List<string>();
+    private int selectIndex;
+
     public static void ItemPrintAll()
     {
         Console.WriteLine("========== 아이템 목록 ============");

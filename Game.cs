@@ -2,7 +2,7 @@ using KGA_OOP_CONSOLE_PROJECT1.Scene;
 
 namespace KGA_OOP_CONSOLE_PROJECT1;
 
-public class Game
+public class Game 
 {
     private static Dictionary<string, BaseScene> sinDic;
     private static BaseScene curScene;
@@ -53,4 +53,5 @@ public class Game
         Console.Clear();
         curScene = sinDic[sceneName];
     }
+
 }

@@ -9,7 +9,7 @@ public class WeaponShopScene : BaseScene
         Console.WriteLine("2. 단검 - 공격력 30 증가");
         Console.WriteLine("3. 너클 - 공격력 60 증가");
         Console.WriteLine("4. 표창 - 공격력 10 증가");
-        Console.WriteLine("5. 나간다.");
+        Console.WriteLine("0. 광장으로 돌아간다.");
         
         Inventory.ItemPrintAll();
     }
@@ -33,7 +33,7 @@ public class WeaponShopScene : BaseScene
             case ConsoleKey.D4:
                 Console.WriteLine("표창을 삽니다.");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Console.WriteLine("광장으로 돌아간다.");
                 break;
         }
@@ -55,7 +55,7 @@ public class WeaponShopScene : BaseScene
             case ConsoleKey.D4:
                 Inventory.inventory.Add("표창");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Game.ChangeScene("Town");
                 break;
         }

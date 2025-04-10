@@ -3,6 +3,7 @@ namespace KGA_OOP_CONSOLE_PROJECT1.Scene;
 public class DungeonScene : BaseScene
 {
     public static bool exitDungeon = false;
+    
     public override void Render()
     {
         Console.WriteLine("========== 던전 ============");
@@ -11,7 +12,7 @@ public class DungeonScene : BaseScene
         Console.WriteLine("3. 레벨 3");
         Console.WriteLine("4. 레벨 4");
         Console.WriteLine("5. 레벨 5");
-        Console.WriteLine("6. 광장으로가기");
+        Console.WriteLine("0. 광장으로 돌아간다");
         
         Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
@@ -47,8 +48,7 @@ public class DungeonScene : BaseScene
                 Map.MapSet(5);
                 Player.PlayerSet(5);
                 break;        
-            case ConsoleKey.D6:
-                Game.ChangeScene("Town");
+            case ConsoleKey.D0:
                 break;        
         }
         
@@ -56,12 +56,20 @@ public class DungeonScene : BaseScene
 
     public override void Result()
     {
-        exitDungeon = false;
-        while (exitDungeon == false)
+        switch (inputKey)
         {
-            Map.MapPrint();
-            Player.PlayerPrint();
-            Player.PlayerMove(Console.ReadKey(true).Key);
+            case ConsoleKey.D0:
+                Game.ChangeScene("Town");
+                break;
+            default:
+                exitDungeon = false;
+                while (exitDungeon == false)
+                {
+                    Map.MapPrint();
+                    Player.PlayerPrint();
+                    Player.PlayerMove(Console.ReadKey(true).Key);
+                }
+                break;
         }
     }
     

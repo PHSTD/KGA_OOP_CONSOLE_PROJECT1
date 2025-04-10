@@ -2,11 +2,19 @@ using KGA_OOP_CONSOLE_PROJECT1.Scene;
 
 namespace KGA_OOP_CONSOLE_PROJECT1;
 
-public static class Player
+public class Player
 {
     public static int hp = 100;
     public static int mp = 100;
     public static Vector2 position;
+    
+    private Inventory inventory;
+    public Inventory Inventory { get { return inventory; } }
+
+    public Player()
+    {
+        inventory = new Inventory();
+    }
 
     public static void PlayerSet(int level)
     {
@@ -37,9 +45,6 @@ public static class Player
         
         switch (input)
         {
-            case ConsoleKey.D0:
-                DungeonScene.exitDungeon = true;
-                break;
             case ConsoleKey.UpArrow:
             case ConsoleKey.W:
                 targetPos.y--;
@@ -55,6 +60,9 @@ public static class Player
             case ConsoleKey.RightArrow:
             case ConsoleKey.D:
                 targetPos.x++;
+                break;
+            case ConsoleKey.D0:
+                DungeonScene.exitDungeon = true;
                 break;
         }
         

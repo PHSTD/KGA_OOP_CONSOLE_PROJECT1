@@ -10,7 +10,7 @@ public class TitleScene : BaseScene
         Console.WriteLine("1. 게임시작");
         Console.WriteLine("2. 게임불러오기");
         Console.WriteLine("3. 게임설정");
-        Console.WriteLine("4. 게임종료");
+        Console.WriteLine("0. 게임종료");
     }
     public override void Input()
     {
@@ -30,7 +30,7 @@ public class TitleScene : BaseScene
             case ConsoleKey.D3:
                 Console.WriteLine("게임을 설정합니다.");
                 break;
-            case ConsoleKey.D4:
+            case ConsoleKey.D0:
                 Console.WriteLine("게임을 종료합니다.");
                 break;
             default:
@@ -52,7 +52,7 @@ public class TitleScene : BaseScene
             case ConsoleKey.D3:
                 Game.ChangeScene("Setting");
                 break;
-            case ConsoleKey.D4:
+            case ConsoleKey.D0:
                 Game.gameOver = true;
                 break;
             default:

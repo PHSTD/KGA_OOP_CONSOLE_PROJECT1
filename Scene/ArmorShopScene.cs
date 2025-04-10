@@ -9,7 +9,7 @@ public class ArmorShopScene : BaseScene
         Console.WriteLine("2. 글러브 - 부상 요소를 10만큼 감소시킵니다.");
         Console.WriteLine("3. 패딩 - 추위 내성 10만큼 증가시킵니다.");
         Console.WriteLine("4. 신발 - 속도 10만큼 증가시킵니다.");
-        Console.WriteLine("5. 나간다.");
+        Console.WriteLine("0. 광장으로 이동.");
         
         Inventory.ItemPrintAll();
     }
@@ -36,7 +36,7 @@ public class ArmorShopScene : BaseScene
             case ConsoleKey.D4:
                 Console.WriteLine("신발을 삽니다.");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Console.WriteLine("광장으로 돌아간다.");
                 break;
         }
@@ -58,7 +58,7 @@ public class ArmorShopScene : BaseScene
             case ConsoleKey.D4:
                 Inventory.inventory.Add("신발");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Game.ChangeScene("Town");
                 break;
         }

@@ -9,7 +9,7 @@ public class TownScene : BaseScene
         Console.WriteLine("2. 방어구 상점으로 간다");
         Console.WriteLine("3. 무기 상점으로 간다");
         Console.WriteLine("4. 던전으로 간다");
-        Console.WriteLine("5. 집으로 간다.");
+        Console.WriteLine("0. 집으로 간다.");
         
         Player.PlayerPrintAll();
         Inventory.ItemPrintAll();
@@ -35,7 +35,7 @@ public class TownScene : BaseScene
             case ConsoleKey.D4:
                 Console.WriteLine("던전으로 향한다");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Console.WriteLine("집으로 간다");
                 break;
         }
@@ -57,7 +57,7 @@ public class TownScene : BaseScene
             case ConsoleKey.D4:
                 Game.ChangeScene("Dungeon");
                 break;
-            case ConsoleKey.D5:
+            case ConsoleKey.D0:
                 Game.ChangeScene("Home");
                 break;
         }
