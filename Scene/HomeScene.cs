@@ -56,10 +56,10 @@ public class HomeScene : BaseScene
         switch (inputKey)
         {
             case ConsoleKey.D1:
-                Player.hp = 100;
+                Player.hp = Player.maxInt;
+                Player.mp = Player.maxInt;
                 break;
             case ConsoleKey.D2:
-                Player.hp = 100;
                 break;
             case ConsoleKey.D3:
                 break;
