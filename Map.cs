@@ -78,16 +78,7 @@ public class Map : DungeonScene
                 }
                 else
                 {
-                    Random random = new Random();
-                    int num = random.Next();
-                    if (num > 0 && num < 20)
-                    {
-                        Console.Write('M');
-                    }
-                    else
-                    {
-                        Console.Write(' ');
-                    }
+                    Console.Write(' ');
                 }
             }
             Console.WriteLine();
