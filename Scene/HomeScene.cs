@@ -9,6 +9,7 @@ public class HomeScene : BaseScene
         Console.WriteLine("2. 아이템 사용");
         Console.WriteLine("3. 아이템 버리기");
         Console.WriteLine("4. 광장가기 - 광장으로 이동합니다.");
+        Console.WriteLine("5. 타이틀로 이동");
         Console.WriteLine("0. 게임 끝내기");
         
         Player.PlayerPrintAll();
@@ -44,6 +45,9 @@ public class HomeScene : BaseScene
             case ConsoleKey.D4:
                 Console.WriteLine("광장으로 이동합니다.");
                 break;
+            case ConsoleKey.D5:
+                Console.WriteLine("타이틀로 이동합니다.");
+                break;
         }
     }
 
@@ -61,6 +65,9 @@ public class HomeScene : BaseScene
                 break;
             case ConsoleKey.D4:
                 Game.ChangeScene("Town");
+                break;
+            case ConsoleKey.D5:
+                Game.ChangeScene("Title");
                 break;
             case ConsoleKey.D0:
                 Game.gameOver = true;
